@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84EB1ED51D2F51D3004FA5A1"
-               BuildableName = "IINA.app"
+               BuildableName = "Player.app"
                BlueprintName = "iina"
                ReferencedContainer = "container:iina.xcodeproj">
             </BuildableReference>
@@ -30,7 +30,7 @@
       shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84EB1ED51D2F51D3004FA5A1"
-            BuildableName = "IINA.app"
+            BuildableName = "Player.app"
             BlueprintName = "iina"
             ReferencedContainer = "container:iina.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84EB1ED51D2F51D3004FA5A1"
-            BuildableName = "IINA.app"
+            BuildableName = "Player.app"
             BlueprintName = "iina"
             ReferencedContainer = "container:iina.xcodeproj">
          </BuildableReference>

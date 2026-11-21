@@ -985,7 +985,7 @@
 		84EA52DF2404E83C00F7617A /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84EA52E12404E83C00F7617A /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/FilterPresets.strings; sourceTree = "<group>"; };
 		84EA52E22404E83C00F7617A /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/KeyBinding.strings; sourceTree = "<group>"; };
-		84EB1ED61D2F51D3004FA5A1 /* IINA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IINA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EB1ED61D2F51D3004FA5A1 /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB1ED91D2F51D3004FA5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EB1EDB1D2F51D3004FA5A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84EB1EE01D2F51D3004FA5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1711,7 +1711,7 @@
 		84EB1ED71D2F51D3004FA5A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84EB1ED61D2F51D3004FA5A1 /* IINA.app */,
+				84EB1ED61D2F51D3004FA5A1 /* Player.app */,
 				E3DE8DCA1FD8166A0021921C /* iina-cli */,
 				49542973216C34950058F680 /* OpenInIINA.appex */,
 				E38558872A484A2D0083772D /* iina-plugin */,
@@ -1978,7 +1978,7 @@
 				8451E6D82604AEFC009A15D7 /* Just */,
 			);
 			productName = mpvx;
-			productReference = 84EB1ED61D2F51D3004FA5A1 /* IINA.app */;
+			productReference = 84EB1ED61D2F51D3004FA5A1 /* Player.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E38558862A484A2D0083772D /* iina-plugin */ = {
@@ -2899,6 +2899,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 67CQ77V27R;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
@@ -2908,9 +2909,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496498882919E47900CD61A5 /* iina.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = iina_nightly;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/$(PRODUCT_NAME).entitlements";
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "GL_SILENCE_DEPRECATION=1";
+				INFOPLIST_KEY_CFBundleDisplayName = Player;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2017-2026\nCollider LI, et al.\nReleased under GPLv3.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -2919,7 +2923,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/deps/lib",
 				);
+				PRODUCT_NAME = Player;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "IINA-Swift.h";
 			};
 			name = Nightly;
 		};
@@ -2946,6 +2952,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 67CQ77V27R;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
@@ -2955,9 +2962,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496498882919E47900CD61A5 /* iina.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = iina_beta;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/$(PRODUCT_NAME).entitlements";
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "GL_SILENCE_DEPRECATION=1";
+				INFOPLIST_KEY_CFBundleDisplayName = Player;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2017-2026\nCollider LI, et al.\nReleased under GPLv3.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -2966,7 +2976,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/deps/lib",
 				);
+				PRODUCT_NAME = Player;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "IINA-Swift.h";
 			};
 			name = Beta;
 		};
@@ -2993,6 +3005,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 67CQ77V27R;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
@@ -3005,6 +3018,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 67CQ77V27R;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
@@ -3014,12 +3028,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496498882919E47900CD61A5 /* iina.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = iina_nightly;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/$(PRODUCT_NAME).entitlements";
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"GL_SILENCE_DEPRECATION=1",
 					"$(inherited)",
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = Player;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2017-2026\nCollider LI, et al.\nReleased under GPLv3.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -3028,7 +3045,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/deps/lib",
 				);
+				PRODUCT_NAME = Player;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "IINA-Swift.h";
 			};
 			name = Debug;
 		};
@@ -3036,9 +3055,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496498882919E47900CD61A5 /* iina.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = iina;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/$(PRODUCT_NAME).entitlements";
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "GL_SILENCE_DEPRECATION=1";
+				INFOPLIST_KEY_CFBundleDisplayName = Player;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2017-2026\nCollider LI, et al.\nReleased under GPLv3.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -3047,7 +3069,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/deps/lib",
 				);
+				PRODUCT_NAME = Player;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "IINA-Swift.h";
 			};
 			name = Release;
 		};
