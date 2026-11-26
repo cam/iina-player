@@ -133,8 +133,10 @@ class InitialWindowController: NSWindowController {
     let appIcon = ui.image(iconImage, size: 68)
     appIcon.translatesAutoresizingMaskIntoConstraints = false
 
-    let iinaLabel = NSTextField(labelWithString: "IINA")
+    let appName = Bundle.main.object(forInfoDictionaryKey: "Product Name") as? String ?? "IINA"
+    let iinaLabel = NSTextField(labelWithString: appName)
     iinaLabel.font = .systemFont(ofSize: 20, weight: .bold)
+    
     let versionLabel = NSTextField(labelWithString: "")
     versionLabel.translatesAutoresizingMaskIntoConstraints = false
     versionLabel.textColor = .secondaryLabelColor

@@ -23,10 +23,12 @@ struct Contributor: Decodable {
 
 fileprivate let ui = UIHelper(scope: "about")
 
+fileprivate let appName = Bundle.main.object(forInfoDictionaryKey: "Product Name") as? String ?? "IINA"
+
 class AboutWindowController: NSWindowController {
   private let windowBackgroundBox = NSBox()
   private let iconImageView = NSImageView()
-  private let iinaLabel = NSTextField(labelWithString: "IINA")
+  private let iinaLabel = NSTextField(labelWithString: appName)
   private let versionLabel = NSTextField(labelWithString: "")
   private let mpvVersionLabel = NSTextField(labelWithString: "")
   private let ffmpegVersionLabel = NSTextField(labelWithString: "")
