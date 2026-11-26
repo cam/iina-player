@@ -237,7 +237,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, SPUUpdaterDelegate {
     switch InfoDictionary.shared.buildType {
     case .release, .beta:
       if FirstRunManager.isFirstRun(for: .init("firstLaunchAfter\(version)")) {
-        guideWindow.show(pages: [.highlights])
+        // @cam/iina-player: Disable highlights window at first load for more minimal experience
+        // guideWindow.show(pages: [.highlights])
       }
     default:
       break
